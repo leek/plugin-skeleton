@@ -8,7 +8,7 @@ use Filament\Support\Assets\Theme;
 use Filament\Support\Color;
 use Filament\Support\Facades\FilamentAsset;
 
-class Skeleton implements Plugin
+class SkeletonTheme implements Plugin
 {
     public function getId(): string
     {
@@ -23,12 +23,13 @@ class Skeleton implements Plugin
 
         $panel
             ->font('DM Sans')
-            ->primaryColor(Color::Amber)
-            ->secondaryColor(Color::Gray)
-            ->warningColor(Color::Amber)
-            ->dangerColor(Color::Rose)
-            ->successColor(Color::Green)
-            ->grayColor(Color::Gray)
+            ->colors([
+                'primary' => Color::Amber,
+                'gray' => Color::Gray,
+                'warning' => Color::Amber,
+                'danger' => Color::Rose,
+                'success' => Color::Green,
+            ])
             ->theme('skeleton');
     }
 
