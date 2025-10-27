@@ -9,7 +9,7 @@ class ModelFactory extends Factory
 {
     protected $model = YourModel::class;
 
-    public function definition()
+    public function definition(): array
     {
         return [
 
